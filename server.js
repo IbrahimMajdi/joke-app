@@ -24,7 +24,7 @@ const client = new pg.Client(process.env.DATABASE_URL);
 app.get('/', mainHandler);
 app.post('/addJoke', addHandler);
 app.get('/fav', favHandler);
-app.get('/details/:joke_id', detailsHandler);
+// app.get('/details/:joke_id', detailsHandler);
 app.get('/random', randomHandler);
 app.post('/update', updateHandler);
 app.post('/delete', deleteHandler);
