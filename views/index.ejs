@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <p>sadsadsadasd</p>
+    <ul>
+        <li><a href="/"> home</a></li>
+        <li><a href="/fav"> favorit list</a></li>
+        <li><a href="/random"> random jokes</a></li>
+    </ul>
+
+    <ul>
+        <% jokes.forEach( joke =>{ %>
+        <form action="/addJoke" method="POST">
+            <li><p> joke # </p></li>
+            <li><%= joke.type  %> </li>
+            <li><%= joke.setup  %> </li>
+            <li><%= joke.punchline  %> </li>
+
+            <button> add to my list</button>
+            
+        </form>
+        <% }) %>
+    </ul>
 </body>
+
 </html>
